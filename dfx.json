@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "ledger": {
+      "type": "custom",
+      "candid": "ledger.did",
+      "wasm": "ledger.wasm"
+    },
+    "controller": {
+      "dependencies" : [
+        "ledger"
+      ],
+      "type": "motoko",
+      "main": "ledger-controller/src/main.mo"
+    }
+  },
+  "version": 1
+}
