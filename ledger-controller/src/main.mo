@@ -7,6 +7,8 @@ import AID "./motoko/util/AccountIdentifier";
 import Hex "./motoko/util/Hex";
 import LEDGER_CANISTER "canister:ledger";
 
+import Debug "mo:base/Debug";
+
 actor class testICP() = this {
     
     type MintTo = {
@@ -44,6 +46,7 @@ actor class testICP() = this {
             }
         );
 
+        Debug.print("mint response: " # debug_show(res));
         return res;
     };
 
